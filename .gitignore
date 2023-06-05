@@ -39,4 +39,4 @@ yarn-error.log*
 .prettierignore
 .prettierrc.json
 .editorconfig
-.eslintrc.json
+.eslintrc*
