@@ -5,24 +5,24 @@ const { linkRegex } = require('../utils/utils');
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
+    default: 'Jacques Cousteau',
     minlength: 2,
     maxlength: 30,
   },
   about: {
     type: String,
-    required: true,
+    default: 'Explorer',
     minlength: 2,
     maxlength: 30,
   },
   avatar: {
     type: String,
+    default: 'https://pictures.s3.yandex.net/resources/avatar_1604080799.jpg',
     validate: {
       validator(v) {
         return linkRegex.test(v);
       },
     },
-    required: true,
   },
   email: {
     type: String,
